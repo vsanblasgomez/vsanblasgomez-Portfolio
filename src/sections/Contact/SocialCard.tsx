@@ -1,5 +1,5 @@
 import { useMemo, type ReactNode } from 'react';
-import { Globe, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../../components/BrandIcons';
 import type { PortfolioContent, Social as SocialType, UiCopy } from '../../data/portfolio';
 import { SocialChip } from './SocialChip';
@@ -8,7 +8,6 @@ import { ContactLine } from './ContactLine';
 const SOCIAL_ICONS: Record<SocialType['icon'], ReactNode> = {
   github: <GithubIcon size={16} />,
   linkedin: <LinkedinIcon size={16} />,
-  globe: <Globe size={16} />,
 };
 
 type SocialCardProps = {

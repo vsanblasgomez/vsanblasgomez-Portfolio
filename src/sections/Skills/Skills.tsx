@@ -21,8 +21,8 @@ export function Skills() {
 
         <InfiniteSlider
           gap={44}
-          duration={6}
-          durationOnHover={12}
+          duration={20}
+          durationOnHover={40}
           className="skills-slider__track"
         >
           {flatSkills.map((skill) => (

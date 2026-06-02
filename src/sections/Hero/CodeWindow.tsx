@@ -1,5 +1,3 @@
-import { Sparkles } from 'lucide-react';
-
 export function CodeWindow() {
   return (
     <div className="code-window">
@@ -21,18 +19,6 @@ export function CodeWindow() {
           {'\n  '}{'}'}<span className="tk-cursor">▍</span>
         </code>
       </pre>
-    </div>
-  );
-}
-
-type HeroBadgeProps = { value: string; label: string; variant?: 'primary' | 'secondary' };
-
-export function HeroBadge({ value, label, variant = 'primary' }: HeroBadgeProps) {
-  return (
-    <div className={variant === 'secondary' ? 'hero-badge secondary' : 'hero-badge'}>
-      <Sparkles size={14} />
-      <span>{value}</span>
-      <em>· {label}</em>
     </div>
   );
 }

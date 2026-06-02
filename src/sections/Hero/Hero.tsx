@@ -4,7 +4,8 @@ import { useLanguage } from '../../hooks/useLanguage';
 import { portfolios, uiCopy } from '../../data/portfolio';
 import { downloadCv } from '../../utils/cv';
 import { fadeUp } from '../../lib/animations';
-import { CodeWindow, HeroBadge } from './CodeWindow';
+import avatar from '../../assets/profile/avatar.png';
+import { CodeWindow } from './CodeWindow';
 
 export function Hero() {
   const { language } = useLanguage();
@@ -13,6 +14,9 @@ export function Hero() {
   const nameParts = portfolio.name.split(' ');
   const first = nameParts.slice(0, -1).join(' ');
   const last = nameParts.slice(-1)[0];
+
+  const stackBadge = portfolio.stats[1];
+  const langBadge = portfolio.stats[2];
 
   return (
     <section id="home" className="hero section-grid">
@@ -34,14 +38,6 @@ export function Hero() {
         </h1>
         <p className="hero-role">{portfolio.role}</p>
         <p className="hero-summary">{portfolio.summary}</p>
-        <div className="stat-strip">
-          {portfolio.stats.map((stat) => (
-            <motion.div key={stat.label} className="stat-pill" whileHover={{ y: -4, scale: 1.02 }}>
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </motion.div>
-          ))}
-        </div>
         <div className="cta-row">
           <a className="btn btn-primary" href="#projects">
             {copy.primaryCta} <ArrowDown size={17} />
@@ -56,13 +52,28 @@ export function Hero() {
       </motion.div>
 
       <motion.div
-        className="hero-panel glass-card"
+        className="hero-side glass-card"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <HeroBadge value={portfolio.stats[1].value} label={portfolio.stats[1].label} />
-        <HeroBadge value={portfolio.stats[2].value} label={portfolio.stats[2].label} variant="secondary" />
+        <div className="hero-side__top">
+          <div className="hero-photo">
+            <img src={avatar} alt={`${portfolio.name} profile photo`} width={240} height={240} />
+          </div>
+          <div className="hero-side__badges">
+            <div className="hero-badge">
+              <Sparkles size={14} />
+              <span>{stackBadge.value}</span>
+              <em>· {stackBadge.label}</em>
+            </div>
+            <div className="hero-badge secondary">
+              <Sparkles size={14} />
+              <span>{langBadge.value}</span>
+              <em>· {langBadge.label}</em>
+            </div>
+          </div>
+        </div>
         <CodeWindow />
       </motion.div>
     </section>

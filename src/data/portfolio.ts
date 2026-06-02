@@ -19,7 +19,7 @@ export type Experience = {
   description: string;
 };
 
-export type Social = { label: string; url: string; icon: 'github' | 'linkedin' | 'globe' };
+export type Social = { label: string; url: string; icon: 'github' | 'linkedin' };
 
 export type PortfolioContent = {
   name: string;
@@ -42,6 +42,7 @@ export type PortfolioContent = {
 export type UiCopy = {
   nav: string[];
   status: string;
+  profile: { statusLabel: string };
   primaryCta: string;
   contactCta: string;
   cvCta: string;
@@ -86,27 +87,27 @@ const shared = {
   socials: [
     { label: 'GitHub', url: 'https://github.com/vsanblasgomez', icon: 'github' as const },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/vsanbla/', icon: 'linkedin' as const },
-    { label: 'Portfolio', url: 'https://example.com/victor-portfolio', icon: 'globe' as const },
   ],
   cvFile: '/CV_Victor_SanBlas.pdf',
-  stack: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Flutter', 'Dart', 'Node.js', 'Python', 'REST APIs', 'Git', 'AWS', 'Firebase'],
+  stack: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Flutter', 'Dart', 'Node.js', 'Python', 'REST APIs', 'Git', 'AWS', 'Firebase', 'AI Agents', 'LLM & Prompts'],
 };
 
 export const portfolios: Record<Language, PortfolioContent> = {
   es: {
     ...shared,
     role: 'Front-End Developer · React · Flutter',
-    summary: 'Front-End Developer con experiencia en aplicaciones web y móviles usando React, JavaScript (ES6+), HTML5 y CSS3. Trabajo con arquitecturas limpias, APIs REST y diseño responsive de alto rendimiento.',
-    about: 'Soy Victor San Blas Gomez, graduado en Tecnología Digital y Multimedia por la Universitat Politècnica de València. Actualmente trabajo en Dots Memories como Front-End Developer con Flutter y React. Me enfoco en construir productos bien estructurados, con interfaces claras, accesibles y orientadas a resultados.',
+    summary: 'Front-End Developer en React, JavaScript (ES6+), Flutter y Dart. Experiencia en aplicaciones web y móviles con HTML5, CSS3, Node.js, Python, AWS, Firebase y APIs REST. Foco en arquitecturas limpias, rendimiento y diseño responsive. Creo agentes de IA para automatizar y optimizar procesos en el entorno laboral.',
+    about: 'Soy Victor San Blas Gomez, graduado en Tecnología Digital y Multimedia por la Universitat Politècnica de València. Actualmente trabajo en Dots Memories como Front-End Developer con Flutter y React. Me enfoco en construir productos bien estructurados, con interfaces claras, accesibles y orientadas a resultados. Combino el desarrollo con la creación de agentes de IA que automatizan y optimizan flujos de trabajo.',
     stats: [
       { label: 'Experiencia', value: '3+ años' },
-      { label: 'Stack principal', value: 'React · JS' },
+      { label: 'Stack principal', value: 'React · Flutter' },
       { label: 'Idiomas', value: 'ES · CA · EN' },
     ],
     skills: {
       Frontend: ['JavaScript (ES6+)', 'React.js', 'HTML5', 'CSS3', 'Responsive Design', 'SEO On-Page', 'State Management'],
       Mobile: ['Flutter', 'Dart', 'Provider', 'SQLite', 'Firebase', 'Push Notifications'],
       Backend: ['Node.js', 'Python', 'REST APIs', 'AWS (nociones)', 'Firebase'],
+      'IA & Automatización': ['Agentes de IA', 'Automatización de procesos', 'LLM & Prompts', 'Optimización con IA', 'Integración de IA en producto'],
       Herramientas: ['Git', 'Clean Architecture / MVC', 'Optimización de rendimiento', 'Figma'],
     },
     projects: [
@@ -137,7 +138,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
         role: 'Frontend Developer (Flutter & React)',
         company: 'Dots Memories',
         period: 'Enero 2025 – Actualidad',
-        description: 'Desarrollo de aplicaciones multiplataforma (Android, iOS, Web) con Flutter, Dart y React aplicando componentización reutilizable y separación de responsabilidades. Implementación de UIs responsivas y accesibles, consumo de APIs REST en tiempo real, Clean Architecture / MVC, gestión de estado con Provider y optimización de rendimiento en producción. Interlocución técnica con diseño, backend y QA.',
+        description: 'Desarrollo de aplicaciones multiplataforma (Android, iOS, Web) con Flutter, Dart y React aplicando componentización reutilizable y separación de responsabilidades. Implementación de UIs responsivas y accesibles, consumo de APIs REST en tiempo real, Clean Architecture / MVC, gestión de estado con Provider y optimización de rendimiento en producción. Creación de agentes de IA para automatizar flujos internos del equipo. Interlocución técnica con diseño, backend y QA.',
       },
       {
         role: 'Freelance Web Developer',
@@ -163,17 +164,18 @@ export const portfolios: Record<Language, PortfolioContent> = {
     ...shared,
     location: 'Valencia, Spain',
     role: 'Front-End Developer · React · Flutter',
-    summary: 'Front-End Developer experienced in web and mobile applications using React, JavaScript (ES6+), HTML5 and CSS3. I work with clean architectures, REST APIs and high-performance responsive interfaces.',
-    about: 'I am Victor San Blas Gomez, a Digital Technology and Multimedia graduate from Universitat Politècnica de València. I currently work at Dots Memories as a Front-End Developer with Flutter and React. I focus on building well-structured products with clear, accessible interfaces and a results-driven mindset.',
+    summary: 'Front-End Developer working with React, JavaScript (ES6+), Flutter and Dart across web and mobile. Experienced with HTML5, CSS3, Node.js, Python, AWS, Firebase and REST APIs. Focused on clean architectures, performance and responsive design. I build AI agents to automate and optimize workplace processes.',
+    about: 'I am Victor San Blas Gomez, a Digital Technology and Multimedia graduate from Universitat Politècnica de València. I currently work at Dots Memories as a Front-End Developer with Flutter and React. I focus on building well-structured products with clear, accessible interfaces and a results-driven mindset. I combine product development with building AI agents that automate and optimize work workflows.',
     stats: [
       { label: 'Experience', value: '3+ years' },
-      { label: 'Main stack', value: 'React · JS' },
+      { label: 'Main stack', value: 'React · Flutter' },
       { label: 'Languages', value: 'ES · CA · EN' },
     ],
     skills: {
       Frontend: ['JavaScript (ES6+)', 'React.js', 'HTML5', 'CSS3', 'Responsive Design', 'On-Page SEO', 'State Management'],
       Mobile: ['Flutter', 'Dart', 'Provider', 'SQLite', 'Firebase', 'Push Notifications'],
       Backend: ['Node.js', 'Python', 'REST APIs', 'AWS (basics)', 'Firebase'],
+      'AI & Automation': ['AI Agents', 'Process Automation', 'LLM & Prompts', 'AI Optimization', 'AI Product Integration'],
       Tooling: ['Git', 'Clean Architecture / MVC', 'Performance Optimization', 'Figma'],
     },
     projects: [
@@ -204,7 +206,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
         role: 'Frontend Developer (Flutter & React)',
         company: 'Dots Memories',
         period: 'January 2025 – Present',
-        description: 'Building cross-platform applications (Android, iOS, Web) with Flutter, Dart and React, applying reusable componentization and separation of concerns. Implementing responsive and accessible UIs, consuming real-time REST APIs, applying Clean Architecture / MVC, managing state with Provider and optimizing production performance. Technical liaison with design, backend and QA teams.',
+        description: 'Building cross-platform applications (Android, iOS, Web) with Flutter, Dart and React, applying reusable componentization and separation of concerns. Implementing responsive and accessible UIs, consuming real-time REST APIs, applying Clean Architecture / MVC, managing state with Provider and optimizing production performance. Building AI agents to automate internal team workflows. Technical liaison with design, backend and QA teams.',
       },
       {
         role: 'Freelance Web Developer',
@@ -229,17 +231,18 @@ export const portfolios: Record<Language, PortfolioContent> = {
   ca: {
     ...shared,
     role: 'Front-End Developer · React · Flutter',
-    summary: 'Front-End Developer amb experiència en aplicacions web i mòbils amb React, JavaScript (ES6+), HTML5 i CSS3. Treballe amb arquitectures netes, APIs REST i disseny responsive d’alt rendiment.',
-    about: 'Soc Victor San Blas Gomez, graduat en Tecnologia Digital i Multimèdia per la Universitat Politècnica de València. Actualment treballe en Dots Memories com a Front-End Developer amb Flutter i React. Em centre a construir productes ben estructurats, amb interfícies clares, accessibles i orientades a resultats.',
+    summary: 'Front-End Developer en React, JavaScript (ES6+), Flutter i Dart. Experiència en aplicacions web i mòbils amb HTML5, CSS3, Node.js, Python, AWS, Firebase i APIs REST. Enfocament en arquitectures netes, rendiment i disseny responsive. Cree agents d’IA per a automatitzar i optimitzar processos en l’entorn laboral.',
+    about: 'Soc Victor San Blas Gomez, graduat en Tecnologia Digital i Multimèdia per la Universitat Politècnica de València. Actualment treballe en Dots Memories com a Front-End Developer amb Flutter i React. Em centre a construir productes ben estructurats, amb interfícies clares, accessibles i orientades a resultats. Combine el desenvolupament amb la creació d’agents d’IA que automatitzen i optimitzen fluxos de treball.',
     stats: [
       { label: 'Experiència', value: '3+ anys' },
-      { label: 'Stack principal', value: 'React · JS' },
+      { label: 'Stack principal', value: 'React · Flutter' },
       { label: 'Idiomes', value: 'ES · CA · EN' },
     ],
     skills: {
       Frontend: ['JavaScript (ES6+)', 'React.js', 'HTML5', 'CSS3', 'Responsive Design', 'SEO On-Page', 'State Management'],
       Mobile: ['Flutter', 'Dart', 'Provider', 'SQLite', 'Firebase', 'Push Notifications'],
       Backend: ['Node.js', 'Python', 'REST APIs', 'AWS (nocions)', 'Firebase'],
+      'IA & Automatització': ['Agents d’IA', 'Automatització de processos', 'LLM & Prompts', 'Optimització amb IA', 'Integració d’IA en producte'],
       Eines: ['Git', 'Clean Architecture / MVC', 'Optimització de rendiment', 'Figma'],
     },
     projects: [
@@ -270,7 +273,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
         role: 'Frontend Developer (Flutter & React)',
         company: 'Dots Memories',
         period: 'Gener 2025 – Actualitat',
-        description: 'Desenvolupament d’aplicacions multiplataforma (Android, iOS, Web) amb Flutter, Dart i React aplicant componentització reutilitzable i separació de responsabilitats. Implementació d’UIs responsives i accessibles, consum d’APIs REST en temps real, Clean Architecture / MVC, gestió d’estat amb Provider i optimització de rendiment en producció. Interlocució tècnica amb disseny, backend i QA.',
+        description: 'Desenvolupament d’aplicacions multiplataforma (Android, iOS, Web) amb Flutter, Dart i React aplicant componentització reutilitzable i separació de responsabilitats. Implementació d’UIs responsives i accessibles, consum d’APIs REST en temps real, Clean Architecture / MVC, gestió d’estat amb Provider i optimització de rendiment en producció. Creació d’agents d’IA per a automatitzar fluxos interns de l’equip. Interlocució tècnica amb disseny, backend i QA.',
       },
       {
         role: 'Freelance Web Developer',
@@ -297,7 +300,8 @@ export const portfolios: Record<Language, PortfolioContent> = {
 export const uiCopy: Record<Language, UiCopy> = {
   es: {
     nav: ['Proyectos', 'Skills', 'Contacto'],
-    status: 'Disponible para proyectos front-end, Flutter y producto digital',
+    status: 'Portfolio · Front-end, Flutter y producto digital',
+    profile: { statusLabel: 'Disponible para nuevos proyectos' },
     primaryCta: 'Ver proyectos',
     contactCta: 'Contactar',
     cvCta: 'Descargar CV',
@@ -334,7 +338,8 @@ export const uiCopy: Record<Language, UiCopy> = {
   },
   en: {
     nav: ['Projects', 'Skills', 'Contact'],
-    status: 'Available for front-end, Flutter and digital product projects',
+    status: 'Portfolio · Front-end, Flutter and digital product',
+    profile: { statusLabel: 'Available for new projects' },
     primaryCta: 'View projects',
     contactCta: 'Contact',
     cvCta: 'Download CV',
@@ -371,7 +376,8 @@ export const uiCopy: Record<Language, UiCopy> = {
   },
   ca: {
     nav: ['Projectes', 'Skills', 'Contacte'],
-    status: 'Disponible per a projectes front-end, Flutter i producte digital',
+    status: 'Portfolio · Front-end, Flutter i producte digital',
+    profile: { statusLabel: 'Disponible per a nous projectes' },
     primaryCta: 'Veure projectes',
     contactCta: 'Contactar',
     cvCta: 'Descarregar CV',

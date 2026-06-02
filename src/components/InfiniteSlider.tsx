@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { animate, motion, useMotionValue, type MotionValue } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useMotionValue, type MotionValue } from 'framer-motion';
 import useMeasure from 'react-use-measure';
 
 type InfiniteSliderProps = {
@@ -21,77 +21,55 @@ export function InfiniteSlider({
   reverse = false,
   className,
 }: InfiniteSliderProps) {
-  const [currentDuration, setCurrentDuration] = useState(duration);
-  const [ref, bounds] = useMeasure();
+  const [trackRef, trackBounds] = useMeasure();
   const translation: MotionValue<number> = useMotionValue(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [key, setKey] = useState(0);
-  const [hasMeasured, setHasMeasured] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const positionRef = useRef(0);
+  const lastTimeRef = useRef<number | null>(null);
 
-  const size = direction === 'horizontal' ? bounds.width : bounds.height;
-
-  useEffect(() => {
-    if (size === 0) {
-      setHasMeasured(false);
-      return;
-    }
-    setHasMeasured(true);
-  }, [size]);
+  const trackSize = direction === 'horizontal' ? trackBounds.width : trackBounds.height;
+  const loopDistance = trackSize > 0 ? trackSize / 2 : 0;
 
   useEffect(() => {
-    if (!hasMeasured) return;
-    const contentSize = size + gap;
-    const from = reverse ? -contentSize / 2 : 0;
-    const to = reverse ? 0 : -contentSize / 2;
-    let controls: ReturnType<typeof animate> | undefined;
+    if (loopDistance === 0) return;
 
-    if (isTransitioning) {
-      controls = animate(translation, [translation.get(), to], {
-        ease: 'linear',
-        duration:
-          currentDuration * Math.abs((translation.get() - to) / contentSize),
-        onComplete: () => {
-          setIsTransitioning(false);
-          setKey((prevKey) => prevKey + 1);
-        },
-      });
-    } else {
-      controls = animate(translation, [from, to], {
-        ease: 'linear',
-        duration: currentDuration,
-        repeat: Infinity,
-        repeatType: 'loop',
-        repeatDelay: 0,
-        onRepeat: () => {
-          translation.set(from);
-        },
-      });
-    }
+    const effectiveDuration = isHovered && durationOnHover ? durationOnHover : duration;
+    const speed = loopDistance / (effectiveDuration * 1000);
+    const directionMul = reverse ? 1 : -1;
+
+    let rafId: number;
+    const tick = (time: number) => {
+      if (lastTimeRef.current === null) {
+        lastTimeRef.current = time;
+      } else {
+        const delta = time - lastTimeRef.current;
+        lastTimeRef.current = time;
+        positionRef.current += directionMul * speed * delta;
+        positionRef.current =
+          ((positionRef.current % loopDistance) + loopDistance) % loopDistance;
+        translation.set(positionRef.current * (reverse ? 1 : -1));
+      }
+      rafId = requestAnimationFrame(tick);
+    };
+    rafId = requestAnimationFrame(tick);
 
     return () => {
-      controls?.stop();
+      cancelAnimationFrame(rafId);
+      lastTimeRef.current = null;
     };
-  }, [key, translation, currentDuration, size, gap, isTransitioning, direction, reverse, hasMeasured]);
+  }, [translation, loopDistance, duration, durationOnHover, isHovered, reverse]);
 
   const hoverProps = durationOnHover
     ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setCurrentDuration(durationOnHover);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setCurrentDuration(duration);
-        },
+        onHoverStart: () => setIsHovered(true),
+        onHoverEnd: () => setIsHovered(false),
       }
     : {};
 
   return (
-    <div
-      className={className ? `infinite-slider ${className}` : 'infinite-slider'}
-      ref={ref}
-    >
+    <div className={className ? `infinite-slider ${className}` : 'infinite-slider'}>
       <motion.div
+        ref={trackRef}
         className="infinite-slider__track"
         style={{
           ...(direction === 'horizontal' ? { x: translation } : { y: translation }),

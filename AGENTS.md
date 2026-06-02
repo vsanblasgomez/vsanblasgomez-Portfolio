@@ -26,6 +26,7 @@ src/
 │   └── index.ts                  # Barrel export
 ├── sections/                     # One folder per page section
 │   ├── Nav/                      # Nav.tsx + index.ts
+│   ├── Profile/                  # Profile.tsx + index.ts (avatar + name + role + location)
 │   ├── Hero/                     # Hero.tsx + CodeWindow.tsx (+ HeroBadge) + index.ts
 │   ├── About/                    # About.tsx + index.ts
 │   ├── Projects/                 # Projects.tsx + ProjectCard.tsx + index.ts
@@ -39,10 +40,12 @@ src/
 ├── data/
 │   └── portfolio.ts              # ALL content: types + per-language data + UI copy
 ├── assets/
-│   └── projects/                 # Project screenshots — imported as ES modules by Vite (hashed, optimized)
-│       ├── watermarks.jpg
-│       ├── taskmaster.jpg
-│       └── urban-cut.webp
+│   ├── projects/                 # Project screenshots — imported as ES modules by Vite (hashed, optimized)
+│   │   ├── watermarks.jpg
+│   │   ├── taskmaster.jpg
+│   │   └── urban-cut.webp
+│   └── profile/                  # Profile avatar (square, ≥400×400, ≤200 kB)
+│       └── avatar.png
 └── utils/
     ├── contact.ts                # Web3Forms submission + rate limit (localStorage)
     └── cv.ts                     # Triggers download of /CV_Victor_SanBlas.pdf
