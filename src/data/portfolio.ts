@@ -1,3 +1,7 @@
+import watermarksImage from '../assets/projects/watermarks.jpg';
+import taskMasterImage from '../assets/projects/taskmaster.jpg';
+import urbanCutImage from '../assets/projects/urban-cut.webp';
+
 export type Language = 'es' | 'en' | 'ca';
 
 export type Project = {
@@ -87,10 +91,6 @@ const shared = {
   cvFile: '/CV_Victor_SanBlas.pdf',
   stack: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Flutter', 'Dart', 'Node.js', 'Python', 'REST APIs', 'Git', 'AWS', 'Firebase'],
 };
-
-const watermarksImage = '/projects/watermarks.jpg';
-const taskMasterImage = '/projects/taskmaster.jpg';
-const urbanCutImage = '/projects/urban-cut.jpg';
 
 export const portfolios: Record<Language, PortfolioContent> = {
   es: {

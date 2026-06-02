@@ -1,2 +1,2 @@
 export { Skills } from './Skills';
-export { SkillCategory } from './SkillCategory';
+export { SkillPill } from './SkillCategory';

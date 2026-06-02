@@ -1,30 +1,15 @@
-import { motion } from 'framer-motion';
-import { fadeUp } from '../../lib/animations';
+import { getSkillIcon } from '../../utils/skillIcons';
 
-type SkillCategoryProps = {
-  category: string;
-  skills: string[];
+type SkillPillProps = {
+  skill: string;
 };
 
-export function SkillCategory({ category, skills }: SkillCategoryProps) {
+export function SkillPill({ skill }: SkillPillProps) {
+  const Icon = getSkillIcon(skill);
   return (
-    <motion.div
-      className="skill-card glass-card"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={fadeUp}
-      transition={{ duration: 0.55 }}
-    >
-      <h3>{category}</h3>
-      {skills.map((skill, index) => (
-        <div className="skill-bar" key={skill}>
-          <span>{skill}</span>
-          <div>
-            <i style={{ width: `${92 - index * 6}%` }} />
-          </div>
-        </div>
-      ))}
-    </motion.div>
+    <div className="skill-pill">
+      <Icon className="skill-pill__icon" strokeWidth={1.5} aria-hidden="true" />
+      <span className="skill-pill__name">{skill}</span>
+    </div>
   );
 }

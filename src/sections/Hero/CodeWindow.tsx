@@ -17,7 +17,7 @@ export function CodeWindow() {
           {'\n    '}<span className="tk-prop">location</span>: <span className="tk-str">"Valencia, ES"</span>,
           {'\n    '}<span className="tk-prop">stack</span>: [<span className="tk-str">"React"</span>, <span className="tk-str">"Flutter"</span>, <span className="tk-str">"TypeScript"</span>],
           {'\n    '}<span className="tk-prop">available</span>: <span className="tk-bool">true</span>,
-          {'\n    '}<span className="tk-prop">email</span>: <span className="tk-str">"victorsbg2003@gmail.com"</span>,
+          {'\n    '}<span className="tk-prop">email</span>: <span className="tk-str">"vsanblasgomez@gmail.com"</span>,
           {'\n  '}{'}'}<span className="tk-cursor">▍</span>
         </code>
       </pre>

@@ -1,5 +1,6 @@
 import { useLanguage } from './hooks/useLanguage';
 import { portfolios, uiCopy } from './data/portfolio';
+import { BackgroundPaths } from './components/BackgroundPaths';
 import { Nav } from './sections/Nav';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
@@ -15,6 +16,8 @@ function App() {
 
   return (
     <main className="app-shell">
+      <BackgroundPaths pathCount={36} layers={2} />
+
       <div className="orb orb-a" />
       <div className="orb orb-b" />
       <div className="orb orb-c" />

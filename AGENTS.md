@@ -38,12 +38,16 @@ src/
 │   └── useTheme.ts
 ├── data/
 │   └── portfolio.ts              # ALL content: types + per-language data + UI copy
+├── assets/
+│   └── projects/                 # Project screenshots — imported as ES modules by Vite (hashed, optimized)
+│       ├── watermarks.jpg
+│       ├── taskmaster.jpg
+│       └── urban-cut.webp
 └── utils/
     ├── contact.ts                # Web3Forms submission + rate limit (localStorage)
     └── cv.ts                     # Triggers download of /CV_Victor_SanBlas.pdf
 public/
-├── CV_Victor_SanBlas.pdf         # User's actual CV
-└── projects/                     # Project screenshots (watermarks.jpg, taskmaster.jpg, urban-cut.jpg)
+└── CV_Victor_SanBlas.pdf         # User's actual CV
 ```
 
 ## Design system
@@ -77,9 +81,11 @@ public/
 ### Add a new project
 Edit `data/portfolio.ts` → `portfolios.es.projects` (and `.en`, `.ca`):
 ```ts
+import newImage from '../assets/projects/my-new.jpg';
+// ...
 {
   title: 'My new project',
-  image: '/projects/my-new.jpg',     // drop file in public/projects/
+  image: newImage,                    // drop file in src/assets/projects/
   description: '...',
   stack: ['React', 'TypeScript'],
   link: 'https://github.com/...',
