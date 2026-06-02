@@ -85,7 +85,7 @@ const shared = {
   phone: '+34 655 92 10 79',
   socials: [
     { label: 'GitHub', url: 'https://github.com/vsanblasgomez', icon: 'github' as const },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/vsanbla', icon: 'linkedin' as const },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/vsanbla/', icon: 'linkedin' as const },
     { label: 'Portfolio', url: 'https://example.com/victor-portfolio', icon: 'globe' as const },
   ],
   cvFile: '/CV_Victor_SanBlas.pdf',
