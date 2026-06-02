@@ -1,68 +1,47 @@
 # Victor San Blas Gomez · Portfolio
 
-Single-page React portfolio. Trilingual (ES / EN / CA), accessible (WCAG 2.1 AA),
-deployed to GitHub Pages with CI/CD on every push to `main`.
+Single-page React portfolio, designed as a working demo of the craft it claims to ship.
+Trilingual (ES / EN / CA), accessible (WCAG 2.1 AA), deployed to GitHub Pages with CI/CD
+on every push to `main`.
 
-[![Live](https://img.shields.io/badge/live-vsanblasgomez.github.io-f97316?style=flat-square)](https://vsanblasgomez.github.io/vsanblasgomez-Portfolio/)
-[![Stack](https://img.shields.io/badge/stack-React%2019%20%C2%B7%20TypeScript%20%C2%B7%20Vite%208-0c0805?style=flat-square)](#stack)
-[![A11y](https://img.shields.io/badge/WCAG-2.1%20AA-22c55e?style=flat-square)](https://www.w3.org/WAI/WCAG21/quickref/)
-[![License](https://img.shields.io/badge/license-MIT-dc2626?style=flat-square)](#license)
-[![Built with OpenCode](https://img.shields.io/badge/built%20with-OpenCode%20%2B%20skills-fbbf24?style=flat-square)](https://opencode.ai)
+🔥 [Live](https://vsanblasgomez.github.io/vsanblasgomez-Portfolio/) · ♿ [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/) · [MIT](#license)
 
-![Preview](./readme-preview.webp)
+![Preview](./readme-preview.png)
 
 ---
 
-## Stack
+## What's inside
 
-- **React 19** + **TypeScript** (strict)
-- **Vite 8**, **framer-motion 12**, **lucide-react**
-- **Web3Forms** for the contact form
-- **GitHub Actions** deploying to **GitHub Pages**
+A warm, opinionated design system in code form. Hero with an animated SVG paths
+background and a code-window motif, 5 editorial sections (01 – 05), 3-language
+Context-based i18n, real contact form via Web3Forms with rate limit, real PDF CV
+download, light/dark themes.
 
-No CSS framework. Hand-written CSS with custom properties and `prefers-reduced-motion`
-fallbacks. Source images bundled by Vite, emitted as WebP, lazy-loaded.
+**Stack** — React 19 · TypeScript (strict) · Vite 8 · framer-motion 12 · lucide-react
+
+No CSS framework, no UI kit, no Lorem Ipsum. Every pixel and every string is committed
+to the repo.
 
 ## How it was built
 
-Built iteratively with **[OpenCode](https://opencode.ai)** and a library of curated
-design skills. The design decisions, copy, accessibility choices, and final QA were
-mine; the execution was accelerated by AI.
+Built with [OpenCode](https://opencode.ai) and a library of design skills — `shape`
+for the multi-round brief discovery, `craft` for end-to-end build flow, `audit` for
+the technical quality scan, and `polish` + `harden` for the final pass. Design
+decisions, copy, and final QA were mine; the agent accelerated the iteration loop.
 
-| Phase | Skill | What it did |
-|---|---|---|
-| Setup | `init` | Wrote `PRODUCT.md` and the `AGENTS.md` working agreement |
-| Discovery | `shape` | Multi-round brief before any code |
-| Build | `craft` | End-to-end build flow per section with brief gates |
-| Quality | `audit` | 5-dimension technical scan, severity-tagged findings |
-| Polish | `polish` | Final alignment and consistency pass |
-| Hardening | `harden` | Edge cases, error states, i18n, rate limit |
+The working agreement that constrains the agent lives in [`AGENTS.md`](./AGENTS.md)
+— useful to read before opening a PR.
 
-Working agreement: [`AGENTS.md`](./AGENTS.md). All copy lives in three languages in
-`src/data/portfolio.ts`; no JSX contains hardcoded strings.
-
-## Quick start
+## Run it locally
 
 ```bash
 npm install
 echo "VITE_WEB3FORMS_KEY=your_key" > .env
-npm run dev          # http://localhost:5173
-npm run build        # tsc + vite build → dist/
+npm run dev
 ```
 
-## Deployment
+Push to `main` and `.github/workflows/deploy.yml` ships it to GitHub Pages.
 
-Push to `main` → `.github/workflows/deploy.yml` runs `tsc && vite build` and deploys
-`dist/` to GitHub Pages. No manual steps. Custom domain is a `CNAME` / `A` record
-plus `base: '/'` in `vite.config.ts`.
+## Get in touch
 
-## Contact
-
-- Email: [vsanblasgomez@gmail.com](mailto:vsanblasgomez@gmail.com)
-- GitHub: [@vsanblasgomez](https://github.com/vsanblasgomez)
-- LinkedIn: [vsanbla](https://www.linkedin.com/in/vsanbla/)
-- CV: [PDF](https://vsanblasgomez.github.io/vsanblasgomez-Portfolio/CV_Victor_SanBlas.pdf)
-
-## License
-
-MIT.
+✉️ [vsanblasgomez@gmail.com](mailto:vsanblasgomez@gmail.com) · [GitHub](https://github.com/vsanblasgomez) · [LinkedIn](https://www.linkedin.com/in/vsanbla/) · [📄 CV](https://vsanblasgomez.github.io/vsanblasgomez-Portfolio/CV_Victor_SanBlas.pdf)
