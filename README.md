@@ -6,6 +6,8 @@ on every push to `main`.
 
 🔥 [Live](https://vsanblasgomez.github.io/vsanblasgomez-Portfolio/) · ♿ [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/) · [MIT](#license)
 
+**▶ [Visit the live site](https://vsanblasgomez.github.io/vsanblasgomez-Portfolio/)**
+
 ![Preview](./readme-preview.png)
 
 ---
