@@ -10,6 +10,8 @@ on every push to `main`.
 
 ![Preview](./readme-preview.png)
 
+> 2856 × 1640 PNG mockup of the live site in a MacBook Air frame.
+
 ---
 
 ## What's inside
