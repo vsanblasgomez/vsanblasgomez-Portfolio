@@ -14,10 +14,11 @@ type ProjectCardProps = {
   project: Project;
   index: number;
   linkLabel: string;
+  privateProjectLabel: string;
   carouselCopy: CarouselCopy;
 };
 
-export function ProjectCard({ project, index, linkLabel, carouselCopy }: ProjectCardProps) {
+export function ProjectCard({ project, index, linkLabel, privateProjectLabel, carouselCopy }: ProjectCardProps) {
   const alt = `${project.title} preview`;
 
   return (
@@ -45,10 +46,12 @@ export function ProjectCard({ project, index, linkLabel, carouselCopy }: Project
             <span key={tool}>{tool}</span>
           ))}
         </div>
-        {project.link && project.link !== '#' && (
+        {project.link && project.link !== '#' ? (
           <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
             {linkLabel} <ArrowUpRight size={15} />
           </a>
+        ) : (
+          <span className="project-private-tag">{privateProjectLabel}</span>
         )}
       </div>
     </motion.article>

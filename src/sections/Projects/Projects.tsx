@@ -18,6 +18,7 @@ export function Projects() {
             project={project}
             index={index}
             linkLabel={copy.projectLink}
+            privateProjectLabel={copy.privateProjectLabel}
             carouselCopy={copy.projectCarousel}
           />
         ))}

@@ -766,6 +766,19 @@ p { color: var(--text-soft); line-height: 1.75; }
 }
 .project-link:hover { color: var(--primary-bright); gap: 10px; }
 
+.project-private-tag {
+  align-self: flex-start;
+  background: var(--surface);
+  border-radius: 16px;
+  color: var(--muted);
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-top: 8px;
+  padding: 4px 10px;
+}
+
 /* ---------- Project carousel ---------- */
 .project-carousel {
   align-items: center;
