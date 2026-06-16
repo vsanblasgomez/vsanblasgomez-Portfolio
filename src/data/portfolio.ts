@@ -130,7 +130,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Watermarks – Plataforma de protección de imágenes (TFG)',
         images: [watermarks1, watermarks2,  watermarks3, watermarks4],
-        description: 'Trabajo de Final de Carrera: plataforma web que permite mediante algoritmos de Python la protección de imágenes a partir de distintas modalidades. Incluye protección visual con un editor de fotos para añadir marcas de agua visibles, y protección no visual como protección de vídeos y fotos con sistemas de marcas de agua frágiles y robustas. Implementa métodos de ocultación de texto e imágenes en el dominio transformado.',
+        description: 'Trabajo de Final de Carrera: plataforma web que permite mediante algoritmos de Python la protección de imágenes a partir de distintas modalidades. Incluye protección visual con un editor de fotos para añadir marcas de agua visibles, y protección no visual como protección de vídeos y fotos con sistemas de marcas de agua frágiles y robustas. Implementa métodos de ocultación de texto e imágenes en el dominio transformado. También se realizaban marcas de agua con encriptación AES y RSA.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
@@ -205,7 +205,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Watermarks – Image protection platform (TFG)',
         images: [watermarks1, watermarks2, watermarks3, watermarks4],
-        description: 'Final Degree Project: web platform that uses Python algorithms for image protection through different modalities. Includes visual protection with a photo editor for adding visible watermarks, and non-visual protection for videos and photos using fragile and robust watermarking systems. Implements text and image hiding methods in the transformed domain.',
+        description: 'Final Degree Project: web platform that uses Python algorithms for image protection through different modalities. Includes visual protection with a photo editor for adding visible watermarks, and non-visual protection for videos and photos using fragile and robust watermarking systems. Implements text and image hiding methods in the transformed domain, as well as AES and RSA encryption-based watermarking.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
@@ -279,7 +279,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Watermarks – Plataforma de protecció d’imatges (TFG)',
         images: [watermarks1, watermarks2, watermarks3, watermarks4],
-        description: 'Treball de Fi de Grau: plataforma web que permet mitjançant algoritmes de Python la protecció d’imatges a partir de diferents modalitats. Inclou protecció visual amb un editor de fotos per a afegir marques d’aigua visuals, i protecció no visual com protecció de vídeos i fotos amb sistemes de marques d’aigua fràgils i robustes. Implementa mètodes d’ocultació de text i imatges en el domini transformat.',
+        description: 'Treball de Fi de Grau: plataforma web que permet mitjançant algoritmes de Python la protecció d’imatges a partir de diferents modalitats. Inclou protecció visual amb un editor de fotos per a afegir marques d’aigua visuals, i protecció no visual com protecció de vídeos i fotos amb sistemes de marques d’aigua fràgils i robustes. Implementa mètodes d’ocultació de text i imatges en el domini transformat. També es realitzaven marques d’aigua amb encriptació AES i RSA.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
