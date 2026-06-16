@@ -122,8 +122,8 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Mailyra – SaaS de gestión de correo electrónico',
         images: [mailyra1, mailyra2, mailyra3, mailyra4],
-        description: 'SaaS de gestión de correo con bandeja unificada, triaje automático con IA, respuestas inteligentes y panel de analytics. Diseño de UI, componentes reutilizables, accesibilidad y foco en productividad del usuario final.',
-        stack: ['React', 'TypeScript', 'IA & LLM', 'Node.js', 'REST API'],
+        description: 'SaaS que convierte Gmail en un espacio de trabajo comercial para pequeñas empresas. Sincroniza correos, organiza clientes, gestiona adjuntos, notas y firma corporativa, y genera presupuestos y facturas en PDF desde la misma interfaz. Arquitectura modular con Supabase Auth, RLS, Storage y Gmail API.',
+        stack: ['React', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Gmail API', 'jsPDF'],
         link: '#',
       },
       {
@@ -197,8 +197,8 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Mailyra – Email management SaaS',
         images: [mailyra1, mailyra2, mailyra3, mailyra4],
-        description: 'Email management SaaS with a unified inbox, AI-powered auto-triage, smart replies and an analytics dashboard. UI design, reusable components, accessibility and a productivity-first approach for end users.',
-        stack: ['React', 'TypeScript', 'AI & LLM', 'Node.js', 'REST API'],
+        description: 'SaaS that turns Gmail into a business workspace for small companies. Syncs emails, organizes clients, manages attachments, notes and corporate signatures, and generates PDF budgets and invoices from the same interface. Modular architecture with Supabase Auth, RLS, Storage and Gmail API.',
+        stack: ['React', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Gmail API', 'jsPDF'],
         link: '#',
       },
       {
@@ -271,8 +271,8 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Mailyra – SaaS de gestió de correu electrònic',
         images: [mailyra1, mailyra2, mailyra3, mailyra4],
-        description: 'SaaS de gestió de correu amb safata unificada, triatge automàtic amb IA, respostes intel·ligents i panell d’analytics. Disseny d’UI, components reutilitzables, accessibilitat i enfocament en productivitat de l’usuari final.',
-        stack: ['React', 'TypeScript', 'IA & LLM', 'Node.js', 'REST API'],
+        description: 'SaaS que convertix Gmail en un espai de treball comercial per a xicotetes empreses. Sincronitza correus, organitza clients, gestiona adjunts, notes i signatura corporativa, i genera pressupostos i factures en PDF des de la mateixa interfície. Arquitectura modular amb Supabase Auth, RLS, Storage i Gmail API.',
+        stack: ['React', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Gmail API', 'jsPDF'],
         link: '#',
       },
       {
