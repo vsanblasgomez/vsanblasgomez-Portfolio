@@ -146,7 +146,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
         images: [urbanCutImage],
         description: 'Landing page corporativa mobile-first con HTML5, CSS3 y React. Optimización SEO on-page (metaetiquetas, semántica HTML) y rendimiento de carga (Core Web Vitals) con foco en captación y conversión.',
         stack: ['React', 'HTML5', 'CSS3', 'SEO On-Page'],
-        link: '#',
+        link: 'https://github.com/vsanblasgomez/URBAN-CUT.git',
       },
     ],
     experience: [
@@ -221,7 +221,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
         images: [urbanCutImage],
         description: 'Mobile-first corporate landing page with HTML5, CSS3 and React. On-page SEO optimization (meta tags, semantic HTML) and loading performance (Core Web Vitals) focused on lead capture and conversion.',
         stack: ['React', 'HTML5', 'CSS3', 'On-Page SEO'],
-        link: '#',
+        link: 'https://github.com/vsanblasgomez/URBAN-CUT.git',
       },
     ],
     experience: [
@@ -295,7 +295,7 @@ export const portfolios: Record<Language, PortfolioContent> = {
         images: [urbanCutImage],
         description: 'Landing page corporativa mobile-first amb HTML5, CSS3 i React. Optimització SEO on-page (metaetiquetes, semàntica HTML) i rendiment de càrrega (Core Web Vitals) amb focus en captació i conversió.',
         stack: ['React', 'HTML5', 'CSS3', 'SEO On-Page'],
-        link: '#',
+        link: 'https://github.com/vsanblasgomez/URBAN-CUT.git',
       },
     ],
     experience: [
