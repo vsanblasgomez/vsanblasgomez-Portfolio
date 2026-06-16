@@ -4,8 +4,8 @@ import watermarks3 from '../assets/projects/watermarks/ocultacion.webp';
 import watermarks4 from '../assets/projects/watermarks/extraccion.webp';
 import taskMaster from '../assets/projects/task_master/taskMaster.webp';
 import urbanCutImage from '../assets/projects/urban/urban-cut.webp';
-import mailyra1 from '../assets/projects/mailyra/dashboard.webp';
-import mailyra2 from '../assets/projects/mailyra/mail_details.webp';
+import mailyra1 from '../assets/projects/mailyra/dispositivos.webp';
+import mailyra2 from '../assets/projects/mailyra/mail.webp';
 import mailyra3 from '../assets/projects/mailyra/profile.webp';
 import mailyra4 from '../assets/projects/mailyra/facturas.webp';
 
