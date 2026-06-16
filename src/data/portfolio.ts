@@ -1,9 +1,13 @@
-import watermarksImage from '../assets/projects/watermarks.jpg';
+import watermarks1 from '../assets/projects/watermarks/portada.webp';
+import watermarks2 from '../assets/projects/watermarks/visible.webp';
+import watermarks3 from '../assets/projects/watermarks/ocultacion.webp';
+import watermarks4 from '../assets/projects/watermarks/extraccion.webp';
 import taskMasterImage from '../assets/projects/taskmaster.jpg';
-import urbanCutImage from '../assets/projects/urban-cut.webp';
-import mailyra1 from '../assets/projects/mailyra-1.svg';
-import mailyra2 from '../assets/projects/mailyra-2.svg';
-import mailyra3 from '../assets/projects/mailyra-3.svg';
+import urbanCutImage from '../assets/projects/urban/urban-cut.webp';
+import mailyra1 from '../assets/projects/mailyra/dashboard.webp';
+import mailyra2 from '../assets/projects/mailyra/mail_details.webp';
+import mailyra3 from '../assets/projects/mailyra/profile.webp';
+import mailyra4 from '../assets/projects/mailyra/facturas.webp';
 
 export type Language = 'es' | 'en' | 'ca';
 
@@ -117,14 +121,14 @@ export const portfolios: Record<Language, PortfolioContent> = {
     projects: [
       {
         title: 'Mailyra – SaaS de gestión de correo electrónico',
-        images: [mailyra1, mailyra2, mailyra3],
+        images: [mailyra1, mailyra2, mailyra3, mailyra4],
         description: 'SaaS de gestión de correo con bandeja unificada, triaje automático con IA, respuestas inteligentes y panel de analytics. Diseño de UI, componentes reutilizables, accesibilidad y foco en productividad del usuario final.',
         stack: ['React', 'TypeScript', 'IA & LLM', 'Node.js', 'REST API'],
         link: '#',
       },
       {
         title: 'Watermarks – Plataforma de protección de imágenes (TFG)',
-        images: [watermarksImage],
+        images: [watermarks1, watermarks2,  watermarks3, watermarks4],
         description: 'Plataforma web full-stack de protección de imágenes: frontend en React + HTML5 y backend en Python con API REST para procesamiento en servidor. Proyecto de fin de grado centrado en seguridad digital, validación de entrada, gestión de errores y escalabilidad.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
@@ -192,14 +196,14 @@ export const portfolios: Record<Language, PortfolioContent> = {
     projects: [
       {
         title: 'Mailyra – Email management SaaS',
-        images: [mailyra1, mailyra2, mailyra3],
+        images: [mailyra1, mailyra2, mailyra3, mailyra4],
         description: 'Email management SaaS with a unified inbox, AI-powered auto-triage, smart replies and an analytics dashboard. UI design, reusable components, accessibility and a productivity-first approach for end users.',
         stack: ['React', 'TypeScript', 'AI & LLM', 'Node.js', 'REST API'],
         link: '#',
       },
       {
         title: 'Watermarks – Image protection platform (TFG)',
-        images: [watermarksImage],
+        images: [watermarks1, watermarks2, watermarks3, watermarks4],
         description: 'Full-stack web platform for image protection: React + HTML5 frontend and Python backend with a REST API for server-side image processing. Final degree project focused on digital security, input validation, error handling and scalability.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
@@ -266,14 +270,14 @@ export const portfolios: Record<Language, PortfolioContent> = {
     projects: [
       {
         title: 'Mailyra – SaaS de gestió de correu electrònic',
-        images: [mailyra1, mailyra2, mailyra3],
+        images: [mailyra1, mailyra2, mailyra3, mailyra4],
         description: 'SaaS de gestió de correu amb safata unificada, triatge automàtic amb IA, respostes intel·ligents i panell d’analytics. Disseny d’UI, components reutilitzables, accessibilitat i enfocament en productivitat de l’usuari final.',
         stack: ['React', 'TypeScript', 'IA & LLM', 'Node.js', 'REST API'],
         link: '#',
       },
       {
         title: 'Watermarks – Plataforma de protecció d’imatges (TFG)',
-        images: [watermarksImage],
+        images: [watermarks1, watermarks2, watermarks3, watermarks4],
         description: 'Plataforma web full-stack de protecció d’imatges: frontend en React + HTML5 i backend en Python amb API REST per a processament en servidor. Projecte de fi de grau centrat en seguretat digital, validació d’entrada, gestió d’errors i escalabilitat.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
