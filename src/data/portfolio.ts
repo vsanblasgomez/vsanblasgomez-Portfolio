@@ -55,6 +55,7 @@ export type UiCopy = {
   cvCta: string;
   sections: Record<'about' | 'projects' | 'skills' | 'experience' | 'contact', { eyebrow: string; title: string; description: string }>;
   projectLink: string;
+  privateProjectLabel: string;
   projectCarousel: { prev: string; next: string; slide: (n: number, total: number) => string };
   contactForm: {
     name: string;
@@ -342,6 +343,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       contact: { eyebrow: 'Contacto', title: 'Hablemos.', description: 'Si quieres conocer más sobre mi trabajo o colaborar, puedes escribirme.' },
     },
     projectLink: 'Abrir proyecto',
+    privateProjectLabel: 'Proyecto privado',
     projectCarousel: {
       prev: 'Imagen anterior',
       next: 'Imagen siguiente',
@@ -385,6 +387,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       contact: { eyebrow: 'Contact', title: 'Let’s talk.', description: 'If you want to know more about my work or collaborate, feel free to contact me.' },
     },
     projectLink: 'Open project',
+    privateProjectLabel: 'Private project',
     projectCarousel: {
       prev: 'Previous image',
       next: 'Next image',
@@ -428,6 +431,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       contact: { eyebrow: 'Contacte', title: 'Parlem.', description: 'Si vols conéixer més sobre el meu treball o col·laborar, pots escriure’m.' },
     },
     projectLink: 'Obrir projecte',
+    privateProjectLabel: 'Projecte privat',
     projectCarousel: {
       prev: 'Imatge anterior',
       next: 'Imatge següent',
