@@ -774,6 +774,7 @@ p { color: var(--text-soft); line-height: 1.75; }
   justify-content: center;
   outline: none;
   position: relative;
+  touch-action: pan-y;
   width: 100%;
 }
 .project-carousel:focus-visible {
@@ -798,16 +799,16 @@ p { color: var(--text-soft); line-height: 1.75; }
 }
 .project-carousel__btn {
   align-items: center;
-  background: color-mix(in srgb, var(--bg-2) 70%, transparent);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  background: color-mix(in srgb, var(--bg-2) 78%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
   border-radius: 999px;
   color: var(--text);
   cursor: pointer;
   display: grid;
   height: 34px;
-  opacity: 0;
+  opacity: 0.9;
   place-items: center;
   position: absolute;
   top: 50%;
@@ -818,11 +819,10 @@ p { color: var(--text-soft); line-height: 1.75; }
 }
 .project-carousel__btn--prev { left: 10px; }
 .project-carousel__btn--next { right: 10px; }
-.project-carousel:hover .project-carousel__btn,
-.project-carousel:focus-within .project-carousel__btn { opacity: 1; }
 .project-carousel__btn:hover {
-  background: color-mix(in srgb, var(--primary) 85%, transparent);
+  background: color-mix(in srgb, var(--primary) 90%, transparent);
   border-color: var(--primary);
+  opacity: 1;
   transform: translateY(-50%) scale(1.06);
 }
 .project-carousel__btn:focus-visible {
@@ -869,10 +869,6 @@ p { color: var(--text-soft); line-height: 1.75; }
 .project-carousel__dot:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
-}
-
-@media (hover: none) {
-  .project-carousel__btn { opacity: 0.55; }
 }
 
 /* ---------- Skills (infinite slider) ---------- */
