@@ -724,7 +724,7 @@ p { color: var(--text-soft); line-height: 1.75; }
   opacity: 0;
   transition: opacity 320ms var(--ease);
 }
-.project-card:hover .project-media img { transform: scale(1.05); }
+.project-card:hover .project-media > img { transform: scale(1.05); }
 .project-card:hover .project-media::after { opacity: 1; }
 
 .project-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; }
@@ -765,6 +765,115 @@ p { color: var(--text-soft); line-height: 1.75; }
   transition: gap 200ms var(--ease), color 200ms ease;
 }
 .project-link:hover { color: var(--primary-bright); gap: 10px; }
+
+/* ---------- Project carousel ---------- */
+.project-carousel {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  width: 100%;
+}
+.project-carousel:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+.project-carousel__track {
+  height: 100%;
+  inset: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.project-carousel__track img {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  user-select: none;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+.project-carousel__btn {
+  align-items: center;
+  background: color-mix(in srgb, var(--bg-2) 70%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  display: grid;
+  height: 34px;
+  opacity: 0;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 200ms var(--ease), background 200ms var(--ease), border-color 200ms var(--ease), transform 200ms var(--ease);
+  width: 34px;
+  z-index: 2;
+}
+.project-carousel__btn--prev { left: 10px; }
+.project-carousel__btn--next { right: 10px; }
+.project-carousel:hover .project-carousel__btn,
+.project-carousel:focus-within .project-carousel__btn { opacity: 1; }
+.project-carousel__btn:hover {
+  background: color-mix(in srgb, var(--primary) 85%, transparent);
+  border-color: var(--primary);
+  transform: translateY(-50%) scale(1.06);
+}
+.project-carousel__btn:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.project-carousel__dots {
+  align-items: center;
+  background: color-mix(in srgb, var(--bg-2) 60%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  border-radius: 999px;
+  bottom: 10px;
+  display: flex;
+  gap: 5px;
+  left: 50%;
+  padding: 5px 8px;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.project-carousel__dot {
+  background: color-mix(in srgb, var(--text-soft) 45%, transparent);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 6px;
+  padding: 0;
+  transition: background 200ms var(--ease), transform 200ms var(--ease), width 200ms var(--ease);
+  width: 6px;
+}
+.project-carousel__dot:hover {
+  background: color-mix(in srgb, var(--text) 80%, transparent);
+}
+.project-carousel__dot.is-active {
+  background: var(--primary);
+  transform: scale(1.2);
+  width: 18px;
+  border-radius: 999px;
+}
+.project-carousel__dot:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (hover: none) {
+  .project-carousel__btn { opacity: 0.55; }
+}
 
 /* ---------- Skills (infinite slider) ---------- */
 .skills-slider {

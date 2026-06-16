@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0f0a"/>
+      <stop offset="1" stop-color="#0f0a08"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg2)"/>
+  <rect x="40" y="40" width="1120" height="670" rx="20" fill="#15110d" stroke="#2a1f17" stroke-width="1"/>
+
+  <!-- Sidebar (slim) -->
+  <rect x="40" y="40" width="80" height="670" rx="20" fill="#1c1612"/>
+  <rect x="68" y="72" width="24" height="24" rx="6" fill="url(#accent2)"/>
+  <g fill="#6b5b50" font-family="Inter, sans-serif" font-size="11">
+    <rect x="56" y="140" width="48" height="40" rx="8" fill="#2a1f17"/>
+    <rect x="74" y="155" width="12" height="10" fill="#f97316"/>
+    <text x="80" y="195" text-anchor="middle" fill="#f97316">Inbox</text>
+    <text x="80" y="245" text-anchor="middle">Sent</text>
+    <text x="80" y="295" text-anchor="middle">Drafts</text>
+    <text x="80" y="345" text-anchor="middle">Tags</text>
+    <text x="80" y="395" text-anchor="middle">Rules</text>
+  </g>
+
+  <!-- Email list column -->
+  <rect x="120" y="40" width="280" height="670" fill="#1a1410"/>
+  <text x="148" y="86" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="600" fill="#fef3c7">Inbox</text>
+  <text x="148" y="108" font-family="Inter, sans-serif" font-size="11" fill="#6b5b50">127 messages · 12 unread</text>
+  <g font-family="Inter, sans-serif" font-size="11">
+    <rect x="136" y="140" width="248" height="60" rx="8" fill="#221912"/>
+    <rect x="136" y="140" width="3" height="60" fill="#f97316"/>
+    <text x="152" y="162" font-weight="600" fill="#fef3c7">Acme Corp</text>
+    <text x="152" y="178" fill="#9c8b80">Q3 report ready for review...</text>
+    <text x="368" y="162" text-anchor="end" fill="#f97316">9:42</text>
+
+    <rect x="136" y="208" width="248" height="60" rx="8" fill="#1c1612"/>
+    <text x="152" y="230" font-weight="600" fill="#fef3c7">Jane Smith</text>
+    <text x="152" y="246" fill="#6b5b50">Re: Onboarding timeline...</text>
+    <text x="368" y="230" text-anchor="end" fill="#6b5b50">Mon</text>
+
+    <rect x="136" y="276" width="248" height="60" rx="8" fill="#1c1612"/>
+    <text x="152" y="298" font-weight="600" fill="#fef3c7">Marketing</text>
+    <text x="152" y="314" fill="#6b5b50">Weekly digest · 14 threads</text>
+    <text x="368" y="298" text-anchor="end" fill="#6b5b50">Mon</text>
+
+    <rect x="136" y="344" width="248" height="60" rx="8" fill="#1c1612"/>
+    <text x="152" y="366" font-weight="600" fill="#fef3c7">Dots Memories</text>
+    <text x="152" y="382" fill="#6b5b50">Sprint planning notes</text>
+    <text x="368" y="366" text-anchor="end" fill="#6b5b50">Sun</text>
+  </g>
+
+  <!-- Email detail view -->
+  <rect x="400" y="40" width="760" height="670" fill="#15110d"/>
+  <rect x="432" y="80" width="120" height="22" rx="11" fill="#dc2626" fill-opacity="0.2" stroke="#dc2626" stroke-opacity="0.5"/>
+  <text x="492" y="95" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#dc2626">important</text>
+  <rect x="560" y="80" width="80" height="22" rx="11" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-opacity="0.5"/>
+  <text x="600" y="95" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#f97316">work</text>
+  <text x="432" y="148" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="600" fill="#fef3c7">Q3 report ready for review</text>
+  <text x="432" y="178" font-family="Inter, sans-serif" font-size="13" fill="#9c8b80">From: <tspan fill="#fef3c7" font-weight="600">Ana Martínez</tspan> &lt;ana@acme.com&gt; · 9:42 AM</text>
+  <line x1="432" y1="200" x2="1128" y2="200" stroke="#2a1f17" stroke-width="1"/>
+
+  <g font-family="Inter, sans-serif" font-size="14" fill="#d6c4b6">
+    <text x="432" y="238">Hi Victor,</text>
+    <text x="432" y="272">Attached is the quarterly report we discussed in last Thursday's call.</text>
+    <text x="432" y="296">Could you take a look at section 4 (operational metrics) and share</text>
+    <text x="432" y="320">feedback before the board meeting next Wednesday?</text>
+    <text x="432" y="364">A few highlights:</text>
+    <text x="448" y="396" fill="#f97316">·</text>
+    <text x="468" y="396">Revenue up 18% YoY, driven by the new SaaS vertical.</text>
+    <text x="448" y="424" fill="#f97316">·</text>
+    <text x="468" y="424">NPS improved to 62 (+7 points).</text>
+    <text x="448" y="452" fill="#f97316">·</text>
+    <text x="468" y="452">Two new enterprise accounts signed in October.</text>
+  </g>
+
+  <!-- Action bar -->
+  <rect x="432" y="600" width="180" height="44" rx="10" fill="url(#accent2)"/>
+  <text x="522" y="627" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#fff">Reply</text>
+  <rect x="624" y="600" width="120" height="44" rx="10" fill="none" stroke="#3a2e25" stroke-width="1"/>
+  <text x="684" y="627" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#fef3c7">Reply all</text>
+  <rect x="756" y="600" width="100" height="44" rx="10" fill="none" stroke="#3a2e25" stroke-width="1"/>
+  <text x="806" y="627" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#fef3c7">Forward</text>
+
+  <!-- AI suggestion card -->
+  <rect x="432" y="510" width="696" height="70" rx="10" fill="#221912" stroke="#f97316" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="460" cy="545" r="12" fill="url(#accent2)"/>
+  <text x="460" y="550" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#fff">AI</text>
+  <text x="486" y="540" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#f97316">Smart reply suggested</text>
+  <text x="486" y="562" font-family="Inter, sans-serif" font-size="12" fill="#9c8b80">"Hi Ana, thanks — I'll review section 4 by Tuesday and send notes ahead of the meeting."</text>
+</svg>

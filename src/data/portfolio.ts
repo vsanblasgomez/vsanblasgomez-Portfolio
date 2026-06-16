@@ -1,12 +1,15 @@
 import watermarksImage from '../assets/projects/watermarks.jpg';
 import taskMasterImage from '../assets/projects/taskmaster.jpg';
 import urbanCutImage from '../assets/projects/urban-cut.webp';
+import mailyra1 from '../assets/projects/mailyra-1.svg';
+import mailyra2 from '../assets/projects/mailyra-2.svg';
+import mailyra3 from '../assets/projects/mailyra-3.svg';
 
 export type Language = 'es' | 'en' | 'ca';
 
 export type Project = {
   title: string;
-  image: string;
+  images: string[];
   description: string;
   stack: string[];
   link: string;
@@ -48,6 +51,7 @@ export type UiCopy = {
   cvCta: string;
   sections: Record<'about' | 'projects' | 'skills' | 'experience' | 'contact', { eyebrow: string; title: string; description: string }>;
   projectLink: string;
+  projectCarousel: { prev: string; next: string; slide: (n: number, total: number) => string };
   contactForm: {
     name: string;
     namePlaceholder: string;
@@ -112,22 +116,29 @@ export const portfolios: Record<Language, PortfolioContent> = {
     },
     projects: [
       {
+        title: 'Mailyra – SaaS de gestión de correo electrónico',
+        images: [mailyra1, mailyra2, mailyra3],
+        description: 'SaaS de gestión de correo con bandeja unificada, triaje automático con IA, respuestas inteligentes y panel de analytics. Diseño de UI, componentes reutilizables, accesibilidad y foco en productividad del usuario final.',
+        stack: ['React', 'TypeScript', 'IA & LLM', 'Node.js', 'REST API'],
+        link: '#',
+      },
+      {
         title: 'Watermarks – Plataforma de protección de imágenes (TFG)',
-        image: watermarksImage,
+        images: [watermarksImage],
         description: 'Plataforma web full-stack de protección de imágenes: frontend en React + HTML5 y backend en Python con API REST para procesamiento en servidor. Proyecto de fin de grado centrado en seguridad digital, validación de entrada, gestión de errores y escalabilidad.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
       {
         title: 'TaskMaster – App móvil de gestión de tareas',
-        image: taskMasterImage,
+        images: [taskMasterImage],
         description: 'App de gestión de tareas para Android e iOS con Flutter y Dart. UI responsiva, gestión de estado con Provider, persistencia local con SQLite y notificaciones push. Testing manual y optimización orientada a métricas de UX.',
         stack: ['Flutter', 'Dart', 'Provider', 'SQLite'],
         link: '#',
       },
       {
         title: 'Urban Cut – Landing corporativa',
-        image: urbanCutImage,
+        images: [urbanCutImage],
         description: 'Landing page corporativa mobile-first con HTML5, CSS3 y React. Optimización SEO on-page (metaetiquetas, semántica HTML) y rendimiento de carga (Core Web Vitals) con foco en captación y conversión.',
         stack: ['React', 'HTML5', 'CSS3', 'SEO On-Page'],
         link: '#',
@@ -180,22 +191,29 @@ export const portfolios: Record<Language, PortfolioContent> = {
     },
     projects: [
       {
+        title: 'Mailyra – Email management SaaS',
+        images: [mailyra1, mailyra2, mailyra3],
+        description: 'Email management SaaS with a unified inbox, AI-powered auto-triage, smart replies and an analytics dashboard. UI design, reusable components, accessibility and a productivity-first approach for end users.',
+        stack: ['React', 'TypeScript', 'AI & LLM', 'Node.js', 'REST API'],
+        link: '#',
+      },
+      {
         title: 'Watermarks – Image protection platform (TFG)',
-        image: watermarksImage,
+        images: [watermarksImage],
         description: 'Full-stack web platform for image protection: React + HTML5 frontend and Python backend with a REST API for server-side image processing. Final degree project focused on digital security, input validation, error handling and scalability.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
       {
         title: 'TaskMaster – Mobile task management app',
-        image: taskMasterImage,
+        images: [taskMasterImage],
         description: 'Task management app for Android and iOS built with Flutter and Dart. Responsive UI, state management with Provider, local persistence with SQLite and push notifications. Manual testing and optimization driven by real UX metrics.',
         stack: ['Flutter', 'Dart', 'Provider', 'SQLite'],
         link: '#',
       },
       {
         title: 'Urban Cut – Corporate landing page',
-        image: urbanCutImage,
+        images: [urbanCutImage],
         description: 'Mobile-first corporate landing page with HTML5, CSS3 and React. On-page SEO optimization (meta tags, semantic HTML) and loading performance (Core Web Vitals) focused on lead capture and conversion.',
         stack: ['React', 'HTML5', 'CSS3', 'On-Page SEO'],
         link: '#',
@@ -247,22 +265,29 @@ export const portfolios: Record<Language, PortfolioContent> = {
     },
     projects: [
       {
+        title: 'Mailyra – SaaS de gestió de correu electrònic',
+        images: [mailyra1, mailyra2, mailyra3],
+        description: 'SaaS de gestió de correu amb safata unificada, triatge automàtic amb IA, respostes intel·ligents i panell d’analytics. Disseny d’UI, components reutilitzables, accessibilitat i enfocament en productivitat de l’usuari final.',
+        stack: ['React', 'TypeScript', 'IA & LLM', 'Node.js', 'REST API'],
+        link: '#',
+      },
+      {
         title: 'Watermarks – Plataforma de protecció d’imatges (TFG)',
-        image: watermarksImage,
+        images: [watermarksImage],
         description: 'Plataforma web full-stack de protecció d’imatges: frontend en React + HTML5 i backend en Python amb API REST per a processament en servidor. Projecte de fi de grau centrat en seguretat digital, validació d’entrada, gestió d’errors i escalabilitat.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
       {
         title: 'TaskMaster – App mòbil de gestió de tasques',
-        image: taskMasterImage,
+        images: [taskMasterImage],
         description: 'App de gestió de tasques per a Android i iOS amb Flutter i Dart. UI responsiva, gestió d’estat amb Provider, persistència local amb SQLite i notificacions push. Testing manual i optimització orientada a mètriques d’UX reals.',
         stack: ['Flutter', 'Dart', 'Provider', 'SQLite'],
         link: '#',
       },
       {
         title: 'Urban Cut – Landing corporativa',
-        image: urbanCutImage,
+        images: [urbanCutImage],
         description: 'Landing page corporativa mobile-first amb HTML5, CSS3 i React. Optimització SEO on-page (metaetiquetes, semàntica HTML) i rendiment de càrrega (Core Web Vitals) amb focus en captació i conversió.',
         stack: ['React', 'HTML5', 'CSS3', 'SEO On-Page'],
         link: '#',
@@ -313,6 +338,11 @@ export const uiCopy: Record<Language, UiCopy> = {
       contact: { eyebrow: 'Contacto', title: 'Hablemos.', description: 'Si quieres conocer más sobre mi trabajo o colaborar, puedes escribirme.' },
     },
     projectLink: 'Abrir proyecto',
+    projectCarousel: {
+      prev: 'Imagen anterior',
+      next: 'Imagen siguiente',
+      slide: (n, total) => `Ir a la imagen ${n} de ${total}`,
+    },
     contactForm: {
       name: 'Nombre',
       namePlaceholder: 'Tu nombre',
@@ -351,6 +381,11 @@ export const uiCopy: Record<Language, UiCopy> = {
       contact: { eyebrow: 'Contact', title: 'Let’s talk.', description: 'If you want to know more about my work or collaborate, feel free to contact me.' },
     },
     projectLink: 'Open project',
+    projectCarousel: {
+      prev: 'Previous image',
+      next: 'Next image',
+      slide: (n, total) => `Go to image ${n} of ${total}`,
+    },
     contactForm: {
       name: 'Name',
       namePlaceholder: 'Your name',
@@ -389,6 +424,11 @@ export const uiCopy: Record<Language, UiCopy> = {
       contact: { eyebrow: 'Contacte', title: 'Parlem.', description: 'Si vols conéixer més sobre el meu treball o col·laborar, pots escriure’m.' },
     },
     projectLink: 'Obrir projecte',
+    projectCarousel: {
+      prev: 'Imatge anterior',
+      next: 'Imatge següent',
+      slide: (n, total) => `Anar a la imatge ${n} de ${total}`,
+    },
     contactForm: {
       name: 'Nom',
       namePlaceholder: 'El teu nom',

@@ -2,14 +2,24 @@ import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Project } from '../../data/portfolio';
 import { fadeUp } from '../../lib/animations';
+import { ProjectCarousel } from './ProjectCarousel';
+
+type CarouselCopy = {
+  prev: string;
+  next: string;
+  slide: (n: number, total: number) => string;
+};
 
 type ProjectCardProps = {
   project: Project;
   index: number;
   linkLabel: string;
+  carouselCopy: CarouselCopy;
 };
 
-export function ProjectCard({ project, index, linkLabel }: ProjectCardProps) {
+export function ProjectCard({ project, index, linkLabel, carouselCopy }: ProjectCardProps) {
+  const alt = `${project.title} preview`;
+
   return (
     <motion.article
       className="project-card glass-card"
@@ -21,7 +31,11 @@ export function ProjectCard({ project, index, linkLabel }: ProjectCardProps) {
       whileHover={{ y: -6 }}
     >
       <div className="project-media">
-        <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+        {project.images.length > 1 ? (
+          <ProjectCarousel images={project.images} alt={alt} copy={carouselCopy} />
+        ) : (
+          <img src={project.images[0]} alt={alt} loading="lazy" />
+        )}
       </div>
       <div className="project-body">
         <h3>{project.title}</h3>

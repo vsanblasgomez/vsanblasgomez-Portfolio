@@ -13,7 +13,13 @@ export function Projects() {
       <SectionTitle index="02" {...copy.sections.projects} />
       <div className="project-grid">
         {portfolio.projects.map((project, index) => (
-          <ProjectCard key={project.title} project={project} index={index} linkLabel={copy.projectLink} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            index={index}
+            linkLabel={copy.projectLink}
+            carouselCopy={copy.projectCarousel}
+          />
         ))}
       </div>
     </section>
