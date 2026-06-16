@@ -45,9 +45,11 @@ export function ProjectCard({ project, index, linkLabel, carouselCopy }: Project
             <span key={tool}>{tool}</span>
           ))}
         </div>
-        <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
-          {linkLabel} <ArrowUpRight size={15} />
-        </a>
+        {project.link && project.link !== '#' && (
+          <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
+            {linkLabel} <ArrowUpRight size={15} />
+          </a>
+        )}
       </div>
     </motion.article>
   );

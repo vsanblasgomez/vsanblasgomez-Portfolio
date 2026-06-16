@@ -2,7 +2,7 @@ import watermarks1 from '../assets/projects/watermarks/portada.webp';
 import watermarks2 from '../assets/projects/watermarks/visible.webp';
 import watermarks3 from '../assets/projects/watermarks/ocultacion.webp';
 import watermarks4 from '../assets/projects/watermarks/extraccion.webp';
-import taskMasterImage from '../assets/projects/taskmaster.jpg';
+import taskMaster from '../assets/projects/task_master/taskMaster.webp';
 import urbanCutImage from '../assets/projects/urban/urban-cut.webp';
 import mailyra1 from '../assets/projects/mailyra/dashboard.webp';
 import mailyra2 from '../assets/projects/mailyra/mail_details.webp';
@@ -129,14 +129,14 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Watermarks – Plataforma de protección de imágenes (TFG)',
         images: [watermarks1, watermarks2,  watermarks3, watermarks4],
-        description: 'Plataforma web full-stack de protección de imágenes: frontend en React + HTML5 y backend en Python con API REST para procesamiento en servidor. Proyecto de fin de grado centrado en seguridad digital, validación de entrada, gestión de errores y escalabilidad.',
+        description: 'Trabajo de Final de Carrera: plataforma web que permite mediante algoritmos de Python la protección de imágenes a partir de distintas modalidades. Incluye protección visual con un editor de fotos para añadir marcas de agua visibles, y protección no visual como protección de vídeos y fotos con sistemas de marcas de agua frágiles y robustas. Implementa métodos de ocultación de texto e imágenes en el dominio transformado.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
       {
-        title: 'TaskMaster – App móvil de gestión de tareas',
-        images: [taskMasterImage],
-        description: 'App de gestión de tareas para Android e iOS con Flutter y Dart. UI responsiva, gestión de estado con Provider, persistencia local con SQLite y notificaciones push. Testing manual y optimización orientada a métricas de UX.',
+        title: 'TaskMaster – App multiplataforma de gestión de tareas',
+        images: [taskMaster],
+        description: 'Aplicación multiplataforma con Flutter pensada para mejorar la gestión de tareas y de estudio. Incluye recordatorios inteligentes, creación de tareas organizadas por categorías, método Pomodoro integrado, estadísticas de productividad y modo de enfoque para maximizar la concentración.',
         stack: ['Flutter', 'Dart', 'Provider', 'SQLite'],
         link: '#',
       },
@@ -204,14 +204,14 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Watermarks – Image protection platform (TFG)',
         images: [watermarks1, watermarks2, watermarks3, watermarks4],
-        description: 'Full-stack web platform for image protection: React + HTML5 frontend and Python backend with a REST API for server-side image processing. Final degree project focused on digital security, input validation, error handling and scalability.',
+        description: 'Final Degree Project: web platform that uses Python algorithms for image protection through different modalities. Includes visual protection with a photo editor for adding visible watermarks, and non-visual protection for videos and photos using fragile and robust watermarking systems. Implements text and image hiding methods in the transformed domain.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
       {
-        title: 'TaskMaster – Mobile task management app',
-        images: [taskMasterImage],
-        description: 'Task management app for Android and iOS built with Flutter and Dart. Responsive UI, state management with Provider, local persistence with SQLite and push notifications. Manual testing and optimization driven by real UX metrics.',
+        title: 'TaskMaster – Cross-platform task management app',
+        images: [taskMaster],
+        description: 'Cross-platform application built with Flutter to improve task and study management. Includes smart reminders, task creation organized by categories, integrated Pomodoro timer, productivity statistics and focus mode to maximize concentration.',
         stack: ['Flutter', 'Dart', 'Provider', 'SQLite'],
         link: '#',
       },
@@ -278,14 +278,14 @@ export const portfolios: Record<Language, PortfolioContent> = {
       {
         title: 'Watermarks – Plataforma de protecció d’imatges (TFG)',
         images: [watermarks1, watermarks2, watermarks3, watermarks4],
-        description: 'Plataforma web full-stack de protecció d’imatges: frontend en React + HTML5 i backend en Python amb API REST per a processament en servidor. Projecte de fi de grau centrat en seguretat digital, validació d’entrada, gestió d’errors i escalabilitat.',
+        description: 'Treball de Fi de Grau: plataforma web que permet mitjançant algoritmes de Python la protecció d’imatges a partir de diferents modalitats. Inclou protecció visual amb un editor de fotos per a afegir marques d’aigua visuals, i protecció no visual com protecció de vídeos i fotos amb sistemes de marques d’aigua fràgils i robustes. Implementa mètodes d’ocultació de text i imatges en el domini transformat.',
         stack: ['React', 'HTML5', 'Python', 'REST API'],
         link: '#',
       },
       {
-        title: 'TaskMaster – App mòbil de gestió de tasques',
-        images: [taskMasterImage],
-        description: 'App de gestió de tasques per a Android i iOS amb Flutter i Dart. UI responsiva, gestió d’estat amb Provider, persistència local amb SQLite i notificacions push. Testing manual i optimització orientada a mètriques d’UX reals.',
+        title: 'TaskMaster – App multiplataforma de gestió de tasques',
+        images: [taskMaster],
+        description: 'Aplicació multiplataforma amb Flutter pensada per a millorar la gestió de tasques i d’estudi. Inclou recordatoris intel·ligents, creació de tasques organitzades per categories, mètode Pomodoro integrat, estadístiques de productivitat i mode d’enfocament per a maximitzar la concentració.',
         stack: ['Flutter', 'Dart', 'Provider', 'SQLite'],
         link: '#',
       },
